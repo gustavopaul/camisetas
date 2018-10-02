@@ -1,0 +1,100 @@
+@import "reboot";
+@import "fonts-clarin";
+
+// variables colores
+$color-arsenal: #cd0c14;
+$color-aston:#6b0019;
+$color-burnley: #789ab2;
+
+// variables url camistas    
+$url-arsenal-local:"../img/Arsenal_Home_1000x1000.png";
+$url-arsenal-visitante:"../img/Arsenal_Away_1000x1000.png";
+
+@mixin camiseta ($url, $color) {
+    background-image: url($url);
+    background-color: $color;    
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.camisetas {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 35%;
+    background-position: 15% 200px;
+    img {
+        float: right;
+        width: 450px;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
+}
+.escudo {
+    display: flex;
+    align-items: center;
+    h2 {
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+    }
+    img {
+        height: 70%;
+        margin: 10px 20px 10px 50px;
+    }
+}
+
+
+
+
+#arsenal-local {
+    @include camiseta($url-arsenal-local, $color-arsenal); 
+}
+#arsenal-visitante {
+    @include camiseta($url-arsenal-visitante, $color-arsenal); 
+}
+
+
+h2#arsenal {
+    color: $color-arsenal;
+}
+
+
+/*
+#arsenal-local {
+    background-image: url("../img/Arsenal_Home_1000x1000.png");
+    background-color: $color-arsenal;
+}
+*/
+
+
+
+#arsenal-visit {
+    background-image: url("../img/Arsenal_Away_1000x1000.png");
+    background-color: $color-arsenal;
+}
+h2#aston {
+    color: $color-aston;
+}
+#aston-local {
+    background-image: url("../img/Aston_Villa_Home_1000x1000.png");
+    background-color:$color-aston;
+}
+#aston-visit {
+    background-image: url("../img/Aston_Villa_Away_1000x1000.png");
+    background-color: $color-aston;
+}
+h2#burnley {
+    color: $color-burnley;
+}
+#burnley-local {
+    background-image: url("../img/Aston_Villa_Home_1000x1000.png");
+    background-color: $color-burnley;
+}
+#burnley-visit {
+    background-image: url("../img/Aston_Villa_Away_1000x1000.png");
+    background-color: $color-burnley;
+}
